@@ -25,30 +25,31 @@
   "layers": [
     {
       "palette": [{ "block": "minecraft:grass_block" }],
-      "minHeight": 2,
-      "maxHeight": 5
+      "minHeight": 1,
+      "maxHeight": 1
     },
     {
       "palette": [{ "block": "minecraft:dirt" }],
-      "minHeight": 2,
-      "maxHeight": 8
+      "minHeight": 1,
+      "maxHeight": 2
     },
     {
-      "minHeight": 5,
-      "maxHeight": 10,
+      "minHeight": 0,
+      "maxHeight": 3,
       "palette": [
         { "block": "minecraft:dirt" },
         { "block": "minecraft:coarse_dirt" }
       ]
     },
     {
-      "minHeight": 7,
+      "minHeight": 2,
       "maxHeight": 15,
-      "style": { "style": "STATIC" },
+      "style": { "style": "FRACTAL_SMOKE", "fracture": {"style": "NOWHERE_SUPERFRACTAL","zoom": 0.01} ,"zoom": 0.01},
       "palette": [
-        { "block": "minecraft:stone" },
-        { "block": "minecraft:andesite" },
-        { "block": "minecraft:stone" }
+        { "block": "minecraft:stone","weight": 60 },
+        { "block": "minecraft:cobblestone","weight": 15  },
+        { "block": "minecraft:andesite","weight": 15  },
+        { "block": "minecraft:gravel","weight": 10  }
       ]
     },
     {
@@ -88,8 +89,15 @@
       }
     }
   ],
+  "biomeSkyScatter": ["LUKEWARM_OCEAN", "LUSH_CAVES"],
+  "biomeStyle": { "style": "SIMPLEX" },
   "objects": [
-    {   "stiltSettings":{"palette": { "palette": [{"block": "minecraft:grass_block"}]},"yMax": 2,"overStilt": 1},
+    {
+      "stiltSettings": {
+        "palette": { "palette": [{ "block": "minecraft:grass_block" }] },
+        "yMax": 2,
+        "overStilt": 1
+      },
       "place": ["clutter/boulder1", "trees/willow/w1"],
       "density": 20,
       "chance": 1,
