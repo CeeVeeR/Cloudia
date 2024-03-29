@@ -1,0 +1,85 @@
+{
+  "name": "Plain Islands",
+  "color": "#7ADB51",
+  "rarity": 2,
+  "derivative": "PLAINS",
+  "vanillaDerivative": "PLAINS",
+  "biomeScatter": ["FOREST", "PLAINS"],
+  "customDerivitives": [
+    {
+      "id": "island",
+      "foliageColor": "#69DF51",
+      "waterColor": "#48BFBC",
+      "grassColor": "#BEDF51",
+      "category": "forest"
+    }
+  ],
+  "generators": [
+    {
+      "min": 10,
+      "max": 30,
+      "generator": "plain"
+    }
+  ],
+
+
+  "layers": [
+    { "palette": [{ "block": "minecraft:grass_block" }] ,"minHeight": 2, "maxHeight": 5},
+    {
+      "palette": [{ "block": "minecraft:dirt" }],
+      "minHeight": 2,
+      "maxHeight": 8
+    },
+    {
+      "minHeight": 5,
+      "maxHeight": 10,
+      "palette": [
+        { "block": "minecraft:dirt" },
+        { "block": "minecraft:coarse_dirt" }
+      ]
+    },
+    {
+      "minHeight": 7,
+      "maxHeight": 15,
+      "style": { "style": "STATIC" },
+      "palette": [
+        { "block": "minecraft:stone" },
+        { "block": "minecraft:andesite" },
+        { "block": "minecraft:stone" }
+      ]
+    },
+        {
+      "minHeight": 2032,
+      "maxHeight": 2032,
+      "style": { "style": "FLAT" },
+      "palette": [
+        { "block": "minecraft:void_air" }
+      ]
+    }
+  ],
+   "seaLayers": [{"minHeight": 100, "maxHeight": 100, "palette": [{"block": "minecraft:void_air"}]}],
+  "decorators": [
+    {
+      "chance": 0.19,
+      "variance": { "style": "STATIC" },
+      "zoom": 0.3,
+      "palette": [{ "block": "minecraft:grass_block" }],
+      "style": { "style": "STATIC" }
+    },
+    {
+      "chance": 0.02,
+      "variance": { "style": "STATIC" },
+      "zoom": 0.3,
+      "palette": [
+        {
+          "data": { "age": 7 },
+          "block": "minecraft:wheat"
+        }
+      ],
+      "style": {
+        "style": "NOWHERE",
+        "zoom": 0.28
+      }
+    }
+  ]
+}

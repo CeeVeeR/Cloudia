@@ -1,0 +1,13 @@
+{
+    "name": "Sky Void",
+    "color": "#ADD8E6",
+    "rarity": 1,
+    "derivative": "THE_VOID",
+    "vanillaDerivative": "THE_VOID",
+    "generators": [{"generator": "void"}],
+    "layers": [{
+        "palette": [{"block": "minecraft:void_air"}],
+        "maxHeight": 2032,
+        "minHeight": 2032
+    }]
+}

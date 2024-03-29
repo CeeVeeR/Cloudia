@@ -1,0 +1,6 @@
+{
+  "name": "Sky",
+  "landBiomes": ["plains"],
+  "seaBiomes": ["skyvoid"],
+  "shoreBiomes": ["skyvoid"]
+}

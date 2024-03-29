@@ -1,0 +1,13 @@
+{
+  "name": "Cloudia",
+  "version": 1,
+  "fluidHeight": 300,
+  "regions": ["sky"],
+  "bedrock": false,
+
+  "environment": "NORMAL",
+  "continentZoom": 1,
+  "landChance": 0.3,"mode":{
+    "type": "ISLANDS"
+  },"fluidPalette":{"palette": [{ "block": "minecraft:void_air"}]}
+}
