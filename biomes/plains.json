@@ -9,7 +9,7 @@
     {
       "id": "island",
       "foliageColor": "#69DF51",
-      "waterColor": "#48BFBC",
+      "waterColor": "#3dfc90",
       "grassColor": "#BEDF51",
       "category": "forest"
     }
@@ -22,9 +22,12 @@
     }
   ],
 
-
   "layers": [
-    { "palette": [{ "block": "minecraft:grass_block" }] ,"minHeight": 2, "maxHeight": 5},
+    {
+      "palette": [{ "block": "minecraft:grass_block" }],
+      "minHeight": 2,
+      "maxHeight": 5
+    },
     {
       "palette": [{ "block": "minecraft:dirt" }],
       "minHeight": 2,
@@ -48,16 +51,20 @@
         { "block": "minecraft:stone" }
       ]
     },
-        {
+    {
       "minHeight": 2032,
       "maxHeight": 2032,
       "style": { "style": "FLAT" },
-      "palette": [
-        { "block": "minecraft:void_air" }
-      ]
+      "palette": [{ "block": "minecraft:void_air" }]
     }
   ],
-   "seaLayers": [{"minHeight": 100, "maxHeight": 100, "palette": [{"block": "minecraft:void_air"}]}],
+  "seaLayers": [
+    {
+      "minHeight": 100,
+      "maxHeight": 100,
+      "palette": [{ "block": "minecraft:void_air" }]
+    }
+  ],
   "decorators": [
     {
       "chance": 0.19,
@@ -72,14 +79,22 @@
       "zoom": 0.3,
       "palette": [
         {
-          "data": { "age": 7 },
-          "block": "minecraft:wheat"
+          "block": "minecraft:short_grass"
         }
       ],
       "style": {
         "style": "NOWHERE",
         "zoom": 0.28
       }
+    }
+  ],
+  "objects": [
+    {   "stiltSettings":{"palette": { "palette": [{"block": "minecraft:grass_block"}]},"yMax": 2,"overStilt": 1},
+      "place": ["clutter/boulder1", "trees/willow/w1"],
+      "density": 20,
+      "chance": 1,
+      "mode": "FAST_STILT",
+      "trees": [{ "anySize": true, "anyTree": true }]
     }
   ]
 }
