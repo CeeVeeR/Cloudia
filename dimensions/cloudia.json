@@ -1,14 +1,13 @@
 {
   "name": "Cloudia",
   "version": 1,
-  "fluidHeight": 300,
+  "fluidHeight": 195,
   "regions": ["sky"],
   "bedrock": false,
-    "rockPalette": {"palette": [{"block": "minecraft:void_air"}]},
+  "rockPalette": { "palette": [{ "block": "minecraft:void_air" }] },
   "environment": "NORMAL",
   "continentZoom": 1,
-  "landChance": 0.3,"mode":{
-    "type": "ISLANDS"
-  },"fluidPalette":{"palette": [{ "block": "minecraft:void_air"}]},
-  "debugChunkCrossSections": true
+  "landChance": 0.24,
+
+  "fluidPalette": { "palette": [{ "block": "minecraft:void_air" }] }
 }

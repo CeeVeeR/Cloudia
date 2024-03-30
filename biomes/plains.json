@@ -1,17 +1,22 @@
 {
   "name": "Plain Islands",
   "color": "#7ADB51",
-  "rarity": 2,
+  "rarity": 1,
   "derivative": "PLAINS",
   "vanillaDerivative": "PLAINS",
-  "biomeScatter": ["FOREST", "PLAINS"],
+  "biomeStyle": { "style": "SIMPLEX" },
   "customDerivitives": [
     {
-      "id": "island",
-      "foliageColor": "#69DF51",
-      "waterColor": "#3dfc90",
-      "grassColor": "#BEDF51",
-      "category": "forest"
+      "id": "sky_island",
+      "skyColor": "#78A7FF",
+      "category": "plains",
+      "fogColor": "#C0D8FF",
+      "humidity": 0.1,
+      "downfallType": "none",
+      "temperature": 0.45,
+      "grassColor": "#FFFFFF",
+      "waterColor": "#3F76E4",
+      "waterFogColor": "#50533"
     }
   ],
   "generators": [
@@ -20,9 +25,7 @@
       "max": 10,
       "generator": "test"
     }
-
   ],
-
   "layers": [
     {
       "palette": [{ "block": "minecraft:grass_block" }],
@@ -30,8 +33,11 @@
       "maxHeight": 1
     },
     {
-      "style":{"style": "CELLULAR_BICUBIC","zoom": 2},
-      "palette": [{ "block": "minecraft:dirt","weight": 80 },{ "block": "minecraft:air","weight": 20 }],
+      "style": { "style": "CELLULAR_BICUBIC", "zoom": 2 },
+      "palette": [
+        { "block": "minecraft:dirt", "weight": 80 },
+        { "block": "minecraft:air", "weight": 20 }
+      ],
       "minHeight": 1,
       "maxHeight": 2
     },
@@ -39,15 +45,6 @@
       "style": { "style": "STATIC" },
       "minHeight": 0,
       "maxHeight": 1,
-      "palette": [
-        { "block": "minecraft:dirt" },
-        { "block": "minecraft:coarse_dirt" }
-      ]
-    },
-    {
-      "style": { "style": "STATIC" },
-      "minHeight": 1,
-      "maxHeight": 2,
       "palette": [
         { "block": "minecraft:dirt" },
         { "block": "minecraft:coarse_dirt" }
@@ -92,192 +89,180 @@
         { "block": "minecraft:stone", "weight": 80 },
         { "block": "minecraft:void_air", "weight": 20 }
       ]
+    }
+  ],
+
+  "objects": [
+    {
+      "mode": "PAINT",
+      "place": [
+        "clutter/boulder1",
+        "clutter/boulder2",
+        "clutter/boulder3",
+        "clutter/boulder4",
+        "clutter/boulder5",
+        "clutter/boulder6",
+        "clutter/boulder7",
+        "clutter/boulder8",
+        "clutter/boulder9",
+        "clutter/boulder10"
+      ],
+      "edit": [
+        {
+          "chance": 0.25,
+          "find": [{ "block": "minecraft:stone" }],
+          "replace": {
+            "palette": [
+              { "block": "minecraft:iron_ore" },
+              {
+                "block": "minecraft:stone",
+                "weight": 10
+              }
+            ]
+          }
+        },
+        {
+          "chance": 0.25,
+          "find": [{ "block": "minecraft:stone" }],
+          "replace": {
+            "palette": [
+              { "block": "minecraft:coal_ore" },
+              {
+                "block": "minecraft:stone",
+                "weight": 10
+              }
+            ]
+          }
+        }
+      ],
+      "chance": 0.1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 30,
+          "min": 0,
+          "max": 360
+        }
+      }
     },
     {
-      "minHeight": 2032,
-      "maxHeight": 2032,
-      "style": { "style": "FLAT" },
-      "palette": [{ "block": "minecraft:void_air" }]
-    }
-  ],
-  "seaLayers": [
+      "mode": "CENTER_HEIGHT",
+      "place": ["clutter/sbush1", "clutter/sbush2", "clutter/sbush3"],
+      "edit": [
+        {
+          "chance": 0.25,
+          "find": [{ "block": "minecraft:oak_leaves" }],
+          "replace": { "palette": [{ "block": "minecraft:birch_leaves" }] }
+        }
+      ],
+      "chance": 0.6,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
     {
-      "minHeight": 100,
-      "maxHeight": 100,
-      "palette": [{ "block": "minecraft:void_air" }]
+      "mode": "CENTER_HEIGHT",
+      "place": [
+        "trees/mixed/pollup1",
+        "trees/mixed/pollup2",
+        "trees/mixed/pollup3",
+        "trees/mixed/pollup4",
+        "trees/mixed/pollup5",
+        "trees/mixed/pollup6",
+        "trees/mixed/pollup7",
+        "trees/mixed/pollup8",
+        "trees/mixed/pollup9",
+        "trees/mixed/pollup10",
+        "trees/mixed/pollup11",
+        "trees/mixed/pollup12",
+        "trees/mixed/pollup13"
+      ],
+      "chance": 0.6,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+    {
+      "chance": 0.075,
+      "rotation": {
+        "yAxis": {
+          "min": 0,
+          "max": 270,
+          "interval": 90,
+          "enabled": true
+        },
+        "enabled": true
+      },
+      "place": [
+        "clutter/stump1",
+        "clutter/stump2",
+        "clutter/stump3",
+        "clutter/stump4",
+        "clutter/stump5",
+        "clutter/stump6"
+      ],
+      "mode": "PAINT"
+    },
+    {
+      "chance": 0.008,
+      "mode": "PAINT",
+      "place": [
+        "clutter/pumpkins1",
+        "clutter/pumpkins2",
+        "clutter/pumpkins3",
+        "clutter/pumpkins4",
+        "clutter/pumpkins5",
+        "clutter/pumpkins6"
+      ],
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "max": 360,
+          "min": 0,
+          "interval": 30
+        }
+      },
+      "translate": { "y": 1 }
     }
   ],
-  "biomeSkyScatter": ["LUKEWARM_OCEAN", "LUSH_CAVES"],
-  "biomeStyle": { "style": "SIMPLEX" },
-    "objects": [
+  "decorators": [
+    {
+      "chance": 0.0001,
+      "variance": { "style": "STATIC" },
+      "palette": [{ "block": "minecraft:cornflower" }],
+      "style": { "style": "STATIC" }
+    },
+    {
+      "chance": 0.5,
+      "style": { "style": "STATIC" },
+      "palette": [
         {
-            "mode": "PAINT",
-            "place": [
-                "clutter/boulder1",
-                "clutter/boulder2",
-                "clutter/boulder3",
-                "clutter/boulder4",
-                "clutter/boulder5",
-                "clutter/boulder6",
-                "clutter/boulder7",
-                "clutter/boulder8",
-                "clutter/boulder9",
-                "clutter/boulder10"
-            ],
-            "edit": [
-                {
-                    "chance": 0.25,
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [
-                        {"block": "minecraft:iron_ore"},
-                        {
-                            "block": "minecraft:stone",
-                            "weight": 10
-                        }
-                    ]}
-                },
-                {
-                    "chance": 0.25,
-                    "find": [{"block": "minecraft:stone"}],
-                    "replace": {"palette": [
-                        {"block": "minecraft:coal_ore"},
-                        {
-                            "block": "minecraft:stone",
-                            "weight": 10
-                        }
-                    ]}
-                }
-            ],
-            "chance": 0.1,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 30,
-                    "min": 0,
-                    "max": 360
-                }
-            }
+          "block": "minecraft:tall_grass",
+          "weight": 5
         },
         {
-            "mode": "CENTER_HEIGHT",
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ],
-            "edit": [{
-                "chance": 0.25,
-                "find": [{"block": "minecraft:oak_leaves"}],
-                "replace": {"palette": [{"block": "minecraft:birch_leaves"}]}
-            }],
-            "chance": 0.6,
-            "density": 2,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 45,
-                    "min": 0,
-                    "max": 360
-                }
-            }
+          "block": "minecraft:short_grass",
+          "weight": 3
         },
-        {
-            "mode": "CENTER_HEIGHT",
-            "place": [
-                "trees/mixed/pollup1",
-                "trees/mixed/pollup2",
-                "trees/mixed/pollup3",
-                "trees/mixed/pollup4",
-                "trees/mixed/pollup5",
-                "trees/mixed/pollup6",
-                "trees/mixed/pollup7",
-                "trees/mixed/pollup8",
-                "trees/mixed/pollup9",
-                "trees/mixed/pollup10",
-                "trees/mixed/pollup11",
-                "trees/mixed/pollup12",
-                "trees/mixed/pollup13"
-            ],
-            "chance": 0.6,
-            "density": 2,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 45,
-                    "min": 0,
-                    "max": 360
-                }
-            }
-        },
-        {
-            "chance": 0.075,
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 270,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": [
-                "clutter/stump1",
-                "clutter/stump2",
-                "clutter/stump3",
-                "clutter/stump4",
-                "clutter/stump5",
-                "clutter/stump6"
-            ],
-            "mode": "PAINT"
-        },
-        {
-            "chance": 0.008,
-            "mode": "PAINT",
-            "place": [
-                "clutter/pumpkins1",
-                "clutter/pumpkins2",
-                "clutter/pumpkins3",
-                "clutter/pumpkins4",
-                "clutter/pumpkins5",
-                "clutter/pumpkins6"
-            ],
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "max": 360,
-                    "min": 0,
-                    "interval": 30
-                }
-            },
-            "translate": {"y": 1}
-        }
-    ],
-    "decorators": [
-        {
-            "chance": 0.0001,
-            "variance": {"style": "STATIC"},
-            "palette": [{"block": "minecraft:cornflower"}],
-            "style": {"style": "STATIC"}
-        },
-        {
-            "chance": 0.5,
-            "style": {"style": "STATIC"},
-            "palette": [
-                {
-                    "block": "minecraft:tall_grass",
-                    "weight": 5
-                },
-                {
-                    "block": "minecraft:short_grass",
-                    "weight": 3
-                },
-                {"block": "minecraft:fern"},
-                {"block": "minecraft:large_fern"}
-            ]
-        }
-    ]
+        { "block": "minecraft:fern" },
+        { "block": "minecraft:large_fern" }
+      ]
+    }
+  ]
 }
