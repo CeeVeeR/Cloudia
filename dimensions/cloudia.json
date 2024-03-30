@@ -9,5 +9,6 @@
   "continentZoom": 1,
   "landChance": 0.3,"mode":{
     "type": "ISLANDS"
-  },"fluidPalette":{"palette": [{ "block": "minecraft:void_air"}]}
+  },"fluidPalette":{"palette": [{ "block": "minecraft:void_air"}]},
+  "debugChunkCrossSections": true
 }
