@@ -1,7 +1,7 @@
 # Cloudia
-A bad protoype of a skyisland pack.
+A simple skyisland pack.
 
 
 Contributors & creators:
-- [Ceeveer](https://github.com/CeeVeeR) Elegant trash pack prototype.
+- [CeeVeeR](https://github.com/CeeVeeR) Consuming the most coffee.
 

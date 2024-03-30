@@ -5,6 +5,21 @@
     "derivative": "THE_VOID",
     "vanillaDerivative": "THE_VOID",
     "generators": [{"generator": "void"}],
+      "customDerivitives": [
+    {
+      "id": "sky_void",
+      "skyColor": "#78A7FF",
+      "category": "plains",
+      "fogColor": "#C0D8FF",
+      "humidity": 0.8,
+      "downfallType": "snow",
+      "temperature": 0.45,
+    "grassColor": "#6ad996",
+      "waterColor": "#00b6ff",
+      "waterFogColor": "#50533",
+      "foliageColor": "#00ae88"
+    }
+  ],
     "layers": [{
         "palette": [{"block": "minecraft:void_air"}],
         "maxHeight": 2032,

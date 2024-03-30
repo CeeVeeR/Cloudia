@@ -7,7 +7,7 @@
   "rockPalette": { "palette": [{ "block": "minecraft:void_air" }] },
   "environment": "NORMAL",
   "continentZoom": 1,
-  "landChance": 0.24,
+  "landChance": 0.18,
 
   "fluidPalette": { "palette": [{ "block": "minecraft:void_air" }] }
 }

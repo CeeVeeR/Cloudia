@@ -13,10 +13,16 @@
       "fogColor": "#C0D8FF",
       "humidity": 0.1,
       "downfallType": "none",
-      "temperature": 0.45,
-      "grassColor": "#FFFFFF",
-      "waterColor": "#3F76E4",
-      "waterFogColor": "#50533"
+      "temperature": 0,
+      "grassColor": "#6ad996",
+      "waterColor": "#00b6ff",
+      "waterFogColor": "#50533",
+      "foliageColor": "#00ae88",
+      "spawns": [
+        { "group": "AMBIENT", "type": "BEE", "maxCount": 6, "minCount": 1 },
+        { "group": "AMBIENT", "type": "RABBIT", "minCount": 3, "maxCount": 13 },
+        {"group": "CREATURE","type": "CHICKEN", "minCount": 2,"maxCount": 5},{"group": "CREATURE","type": "SHEEP","minCount": 2, "maxCount": 6}, {"group": "CREATURE","type": "COW","minCount": 2,"maxCount": 7},{"group": "CREATURE","type": "ALLAY", "minCount": 1, "maxCount": 1}
+      ]
     }
   ],
   "generators": [
@@ -149,13 +155,6 @@
     {
       "mode": "CENTER_HEIGHT",
       "place": ["clutter/sbush1", "clutter/sbush2", "clutter/sbush3"],
-      "edit": [
-        {
-          "chance": 0.25,
-          "find": [{ "block": "minecraft:oak_leaves" }],
-          "replace": { "palette": [{ "block": "minecraft:birch_leaves" }] }
-        }
-      ],
       "chance": 0.6,
       "density": 2,
       "rotation": {
@@ -171,21 +170,99 @@
     {
       "mode": "CENTER_HEIGHT",
       "place": [
-        "trees/mixed/pollup1",
-        "trees/mixed/pollup2",
-        "trees/mixed/pollup3",
-        "trees/mixed/pollup4",
-        "trees/mixed/pollup5",
-        "trees/mixed/pollup6",
-        "trees/mixed/pollup7",
-        "trees/mixed/pollup8",
-        "trees/mixed/pollup9",
-        "trees/mixed/pollup10",
-        "trees/mixed/pollup11",
-        "trees/mixed/pollup12",
-        "trees/mixed/pollup13"
+        "trees/mixed/AmyLarge1",
+        "trees/mixed/AmyLarge2",
+        "trees/mixed/AmyLarge3",
+        "trees/mixed/AmyLarge4",
+        "trees/mixed/AmyLarge5",
+        "trees/mixed/AmyLarge6",
+        "trees/mixed/AmyLarge7",
+        "trees/mixed/AmyLarge8"
       ],
-      "chance": 0.6,
+      "chance": 0.05,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+
+    {
+      "mode": "CENTER_HEIGHT",
+      "place": [
+        "trees/mixed/AmyMed1",
+        "trees/mixed/AmyMed2",
+        "trees/mixed/AmyMed3",
+        "trees/mixed/AmyMed4",
+        "trees/mixed/AmyMed5",
+        "trees/mixed/AmyMed6",
+        "trees/mixed/AmyMed7",
+        "trees/mixed/AmyMed8",
+        "trees/mixed/AmyMed9"
+      ],
+      "chance": 0.03,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+
+    {
+      "mode": "CENTER_HEIGHT",
+      "place": [
+        "trees/mixed/AmyNormal1",
+        "trees/mixed/AmyNormal2",
+        "trees/mixed/AmyNormal3",
+        "trees/mixed/AmyNormal4",
+        "trees/mixed/AmyNormal5",
+        "trees/mixed/AmyNormal6",
+        "trees/mixed/AmyNormal7",
+        "trees/mixed/AmyNormal8",
+        "trees/mixed/AmyNormal9",
+        "trees/mixed/AmyNormal10",
+        "trees/mixed/AmyNormal11",
+        "trees/mixed/AmyNormal12"
+      ],
+      "chance": 0.04,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+    {
+      "mode": "CENTER_HEIGHT",
+      "place": [
+        "trees/mixed/AmySmol1",
+        "trees/mixed/AmySmol2",
+        "trees/mixed/AmySmol3",
+        "trees/mixed/AmySmol4",
+        "trees/mixed/AmySmol5",
+        "trees/mixed/AmySmol6",
+        "trees/mixed/AmySmol7",
+        "trees/mixed/AmySmol8",
+        "trees/mixed/AmySmol9",
+        "trees/mixed/AmySmol10",
+        "trees/mixed/AmySmol11",
+        "trees/mixed/AmySmol12"
+      ],
+      "chance": 0.03,
       "density": 2,
       "rotation": {
         "enabled": true,
@@ -197,6 +274,87 @@
         }
       }
     },
+    {
+      "chance": 0.06,
+      "density": 2,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+    {
+      "mode": "CENTER_HEIGHT",
+      "place": [
+        "trees/mixed/honey1",
+        "trees/mixed/honey2",
+        "trees/mixed/honey3",
+        "trees/mixed/honey4",
+        "trees/mixed/honey5",
+        "trees/mixed/honey6",
+        "trees/mixed/honey7",
+        "trees/mixed/honey8",
+        "trees/mixed/honey9",
+        "trees/mixed/honey10",
+        "trees/mixed/honey11",
+        "trees/mixed/honey12",
+        "trees/mixed/honey13",
+        "trees/mixed/honey14",
+        "trees/mixed/honey15",
+        "trees/mixed/honey16",
+        "trees/mixed/honey17",
+        "trees/mixed/honey18",
+        "trees/mixed/honey19",
+        "trees/mixed/honey20"
+      ],
+      "chance": 0.002,
+      "density": 1,
+      "rotation": {
+        "enabled": true,
+        "yAxis": {
+          "enabled": true,
+          "interval": 45,
+          "min": 0,
+          "max": 360
+        }
+      }
+    },
+          {
+            "chance": 0.03,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/obelisk1",
+                "clutter/obelisk2",
+                "clutter/obelisk3",
+                "clutter/obelisk4",
+                "clutter/obelisk5",
+                "clutter/obelisk6",
+                "clutter/obelisk7",
+                "clutter/genericpeak1",
+                "clutter/genericpeak2",
+                "clutter/genericpeak3",
+                "clutter/genericpeak5",
+                "clutter/genericpeak6",
+                "structures/landstone1",
+                "structures/landstone2",
+                "structures/landstone3",
+                "structures/landstone4",
+                "structures/landstone5",
+                "clutter/statue-villager-plains"
+            ]
+        },
     {
       "chance": 0.075,
       "rotation": {
@@ -219,15 +377,15 @@
       "mode": "PAINT"
     },
     {
-      "chance": 0.008,
+      "chance": 0.02,
       "mode": "PAINT",
       "place": [
-        "clutter/pumpkins1",
-        "clutter/pumpkins2",
-        "clutter/pumpkins3",
-        "clutter/pumpkins4",
-        "clutter/pumpkins5",
-        "clutter/pumpkins6"
+        "clutter/melons1",
+        "clutter/melons2",
+        "clutter/melons3",
+        "clutter/melons4",
+        "clutter/melons5",
+        "clutter/melons6"
       ],
       "rotation": {
         "enabled": true,
@@ -246,6 +404,24 @@
       "chance": 0.0001,
       "variance": { "style": "STATIC" },
       "palette": [{ "block": "minecraft:cornflower" }],
+      "style": { "style": "STATIC" }
+    },
+    {
+      "chance": 0.001,
+      "variance": { "style": "STATIC" },
+      "palette": [{ "block": "minecraft:poppy" }],
+      "style": { "style": "STATIC" }
+    },
+    {
+      "chance": 0.001,
+      "variance": { "style": "STATIC" },
+      "palette": [{ "block": "minecraft:dandelion" }],
+      "style": { "style": "STATIC" }
+    },
+    {
+      "chance": 0.02,
+      "variance": { "style": "STATIC" },
+      "palette": [{ "block": "minecraft:sunflower" }],
       "style": { "style": "STATIC" }
     },
     {
