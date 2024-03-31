@@ -19,7 +19,6 @@
       "waterFogColor": "#50533",
       "foliageColor": "#00ae88",
       "spawns": [
-        { "group": "AMBIENT", "type": "BEE", "maxCount": 6, "minCount": 1 },
         { "group": "AMBIENT", "type": "RABBIT", "minCount": 3, "maxCount": 13 },
         {"group": "CREATURE","type": "CHICKEN", "minCount": 2,"maxCount": 5},{"group": "CREATURE","type": "SHEEP","minCount": 2, "maxCount": 6}, {"group": "CREATURE","type": "COW","minCount": 2,"maxCount": 7},{"group": "CREATURE","type": "ALLAY", "minCount": 1, "maxCount": 1}
       ]
